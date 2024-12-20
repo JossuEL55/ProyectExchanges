@@ -1,0 +1,17 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ECommerceApp.MainPage"
+             Title="Sistema de Mensajería de E-Commerce">
+    <StackLayout Padding="20">
+        <Label Text="Mensajes a través de Rabbit MQ" FontSize="24" HorizontalOptions="Center" />
+        <ListView x:Name="MessagesListView" Margin="0,20,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Entry x:Name="MessageEntry" Placeholder="Enter a message" />
+        <Button Text="Send Message" Clicked="OnSendMessageClicked" />
+    </StackLayout>
+</ContentPage>
